@@ -1,18 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/mainBackground"
+    android:weightSum="2"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <LinearLayout
+        android:weightSum="3"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/textColor"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="TEAM 1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:paddingTop="40dp"
+            android:gravity="center_horizontal"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/custom_button"
+                android:id="@+id/button_team1_down"
+                android:text="-"
+                android:gravity="center"
+                android:textColor="@color/teal_200"
+                android:textSize="40sp"
+                android:layout_height="60dp"
+                android:layout_width="60dp"/>
+            <TextView
+                android:textColor="@color/textColor"
+                android:id="@+id/edt_score_team1"
+                android:layout_marginHorizontal="60dp"
+                android:textSize="40dp"
+                android:text="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:layout_marginRight="20dp"
+                android:background="@drawable/custom_button"
+                android:id="@+id/button_team1_up"
+                android:text="+"
+                android:gravity="center"
+                android:textColor="@color/teal_200"
+                android:textSize="40sp"
+                android:layout_height="60dp"
+                android:layout_width="60dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:weightSum="3"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/textColor"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="TEAM 2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:paddingTop="40dp"
+            android:gravity="center_horizontal"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:background="@drawable/custom_button"
+                android:id="@+id/button_team2_down"
+                android:text="-"
+                android:gravity="center"
+                android:textColor="@color/teal_200"
+                android:textSize="40sp"
+                android:layout_height="60dp"
+                android:layout_width="60dp"/>
+            <TextView
+                android:textColor="@color/textColor"
+                android:id="@+id/edt_score_team2"
+                android:layout_marginHorizontal="50dp"
+                android:text="0"
+                android:textSize="40sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:background="@drawable/custom_button"
+                android:id="@+id/button_team2_up"
+                android:text="+"
+                android:gravity="center"
+                android:textColor="@color/teal_200"
+                android:textSize="40sp"
+                android:layout_height="60dp"
+                android:layout_width="60dp"/>
+        </LinearLayout>
+    </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
